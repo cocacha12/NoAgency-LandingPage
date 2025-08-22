@@ -2,7 +2,6 @@ import { useState } from 'react'
 import { MenuIcon, XIcon, UserIcon } from 'lucide-react'
 import LoginDialog from './LoginDialog'
 import { useAuthContext } from '../contexts/AuthContext'
-import { getAssetUrl } from '../lib/storageUtils'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

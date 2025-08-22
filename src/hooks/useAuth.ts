@@ -1,17 +1,15 @@
 import { useState, useEffect, useCallback } from 'react'
-import type { User, Session } from '@supabase/supabase-js'
-import { 
-  supabase, 
-  signInWithEmail, 
-  signUpWithEmail, 
-  signInWithGoogle, 
-  signOut, 
-  getCurrentUser, 
+import type { Session } from '@supabase/supabase-js'
+import {
+  signInWithEmail,
+  signUpWithEmail,
+  signInWithGoogle,
+  signOut,
   getSession,
   getUserProfile,
   subscribeToAuthChanges
 } from '../lib/supabaseClient'
-import type { UserProfile, LoginCredentials, RegisterCredentials, AuthState } from '../types/auth'
+import type { UserProfile, LoginCredentials, RegisterCredentials } from '../types/auth'
 
 export const useAuth = () => {
   const [authState, setAuthState] = useState<{
@@ -98,7 +96,7 @@ export const useAuth = () => {
     try {
       setAuthState(prev => ({ ...prev, loading: true, error: null }))
       
-      const { data, error } = await signInWithEmail(credentials)
+      const { error } = await signInWithEmail(credentials)
       
       if (error) {
         setAuthState(prev => ({
@@ -136,7 +134,7 @@ export const useAuth = () => {
     try {
       setAuthState(prev => ({ ...prev, loading: true, error: null }))
       
-      const { data, error } = await signUpWithEmail(credentials)
+      const { error } = await signUpWithEmail(credentials)
       
       if (error) {
         setAuthState(prev => ({
@@ -169,7 +167,7 @@ export const useAuth = () => {
     try {
       setAuthState(prev => ({ ...prev, loading: true, error: null }))
       
-      const { data, error } = await signInWithGoogle()
+      const { error } = await signInWithGoogle()
       
       if (error) {
         setAuthState(prev => ({

@@ -1,9 +1,6 @@
-import React from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
-import { products, testimonials, capabilities, trustLogos, problems, solutions, comparisonData, howItWorks, brandyFeatures, teamMembers } from '../../data/products'
-import { CheckIcon, ArrowRightIcon } from 'lucide-react'
-import { getAssetUrl } from '../../lib/storageUtils'
+import { testimonials, capabilities } from '../../data/products'
 import { 
   siCanva, 
   siOpenai, 
@@ -17,7 +14,6 @@ import {
   siMessenger,
   siCheckmarx,
   siIcloud,
-  siOpenai as siBrain,
   siCashapp
 } from 'simple-icons'
 import { Smartphone, Brain, Bot, Calendar, MessageCircle, Rocket } from 'lucide-react'

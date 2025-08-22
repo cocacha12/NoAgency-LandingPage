@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
-import type { UserProfile, LoginCredentials, RegisterCredentials, Lead, WebContent } from '../types/auth'
+import type { UserProfile, LoginCredentials, RegisterCredentials, Lead } from '../types/auth'
 
 const supabaseUrl = import.meta.env.VITE_NEXT_PUBLIC_SUPABASE_URL || 'https://ghllpsejvegdleerdger.supabase.co'
 const supabaseAnonKey = import.meta.env.VITE_NEXT_PUBLIC_SUPABASE_PUBLISHABLE_DEFAULT_KEY || 'sb_publishable_wWi1n3RkZyw7ZAoeAbi0wA_v6ir41i2'
